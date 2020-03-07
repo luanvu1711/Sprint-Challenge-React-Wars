@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import Posts from "./components/Posts.js";
+import styled from 'styled-components';
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -23,16 +24,12 @@ const App = () => {
 
   }, [people]);
 
-  
-  
-
-  
-
-
-  
+  const Header1 = styled.h1 `
+    font-size: 50px;
+  `
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+      <Header1>React Wars</Header1>
      {
        people.map(item=> {
         return (
